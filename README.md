@@ -9,15 +9,19 @@
 | 18/0108344  |  Rafael Berto Pereira | 
 
 ## Sobre 
-Usar Daektra em python para verificar o melhor caminho da topologia do [site](https://www.rnp.br/sistema-rnp/ferramentas/panorama-de-trafego)
+Usar Dijkstra em python para verificar o melhor caminho da topologia do [site](https://www.rnp.br/sistema-rnp/ferramentas/panorama-de-trafego)
 
 ## Screenshots
-Em breve
+Nosso trabalho irá se basear nesse grafo de panorama de tráfego para gerar o melhor caminho a partir de Dijkstra
+
+![Grafo_original](../Grafos2_TopologiaRedesBrasil/imagens/grafo_Internet.png)
 
 ## Video
 Em breve no formato ".mp4"
 
 ## Instalação 
+use o comando: pip install -m requirements.txt
+
 **Linguagem**: Python3 <br>
 **Bibliotecas**: emBreve<br>
 **Pre-Requisitos**: Python 3.10.4 <br>

@@ -56,13 +56,17 @@ def dijkstra_path(graph, start, end):
 
 nodes = [
     'RO', 'MT', 'GO', 'AM', 'RR', 'CE', 'RN',
-    'AC', 'MS', 'TO', 'MG', 'AP', 'PA', 'MA', 'PB_JPA',
-    'RA', 'PR', 'BA', 'SE', 'AL', 'PI',
-    'SC', 'SP', 'RJ', 'ES', 'PE', 'PB-CGE'
+    'AC', 'MS', 'TO', 'MG', 'AP', 'PA', 'MA', 
+    'PB_JPA', 'PR', 'BA', 'SE', 'AL', 'PI',
+    'SC', 'SP', 'RJ', 'ES', 'PE', 'PB_CGE'
 ]
 
-edges = [('DF', 'RO'), ('RO', 'MT'), ('RO', 'AP'), ('AP', 'AL'),
-         ('AL', 'SP'), ('MT', 'SP'), ('MT', 'RJ')]
+edges = edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
+("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF", "SP"), ("GO", "MT"), ("GO", "TO"), 
+("TO", "PA"), ("MT", "MS"), ("MT", "RO"), ("RO", "AC"), ("MS", "PR"), ("PR", "RS"), ("RS", "SC"), ("SC", "SP"), ("SP", "PR"), ("RS", "SP"), ("PR", "SC"), ("SP", "RJ"), ("SP", "RJ"), ("SP", "MG"), ("SP", "CE"), ("RJ", "MG"), ("RJ", "ES"), ("ES", "BA"), ("MG", "BA"), ("BA", "CE"), ("BA", "SE"), ("SE", "AL"), ("AL", "PE"), ("PA", "MA"),
+("BA", "PB_CGE"), ("PE", "PI"), ("PI", "MA"), ("AM", "RR"), ("RR", "CE"), ("CE", "RN"),
+("PE", "PB_CGE"), ("RN", "PB_CGE"), ("RN", "PB_JPA"), ("PB_CGE", "PB_JPA"), 
+("AM", "AP"), ("AP", "PA") ]
 
 # Create a graph with the nodes and edges
 graph = networkx.Graph()
