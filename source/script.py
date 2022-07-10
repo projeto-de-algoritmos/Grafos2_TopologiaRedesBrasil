@@ -5,6 +5,7 @@ import PySimpleGUI as sg
 import random
 from sqlalchemy import true
 import pandas as pd
+import os
 
 # list of nodes
 nodes = [
@@ -39,8 +40,11 @@ fixed_positions = {
 
 
 def add_weights_to_edges(graph):
-    path = '/data/states_distances.csv'
-    states_csv = pd.read_csv(path)
+    # get states_distances.csv file from data folder
+    states_csv = pd.read_csv(os.path.join(
+        os.path.dirname(__file__), '..', 'data', 'states_distances.csv'))
+    # path = '/data/states_distances.csv'
+    # states_csv = pd.read_csv(path)
     # for each row assign the pair state and its distance to the respective edge pair
     for index, row in states_csv.iterrows():
         if (row['state1'], row['state2']) in edges:
