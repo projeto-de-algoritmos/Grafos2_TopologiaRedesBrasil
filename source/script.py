@@ -1,6 +1,10 @@
+import string
 import networkx
 import matplotlib.pyplot as plt
+import PySimpleGUI as sg
 import random
+
+from sqlalchemy import true
 
 
 def dijkstra_path(graph, start, end):
@@ -88,7 +92,44 @@ graph.add_edge('RO', 'MT', weight=100)
 
 # get the shortest path between two nodes using dijkstra's algorithm
 # path = networkx.dijkstra_path(graph, 'DF', 'SP')
-path = dijkstra_path(graph, 'DF', 'SP')
+
+# Create options for the dropdown tab 
+selection = nodes
+selection.sort()
+width = max(map(len, selection))+1
+
+layout = [[sg.Text("Escolha a origem e o destino da transmissão de dados")],           
+          [sg.Text("Origem:"), sg.Combo(selection, size=(width, 5), enable_events=True, key='-Start_Server-', pad=(0,0))],
+          [sg.Text("Destino:"),sg.Combo(selection, size=(width, 5), enable_events=True, key='-End_Server-',pad=(0,40))],
+          [sg.Button("OK", pad=(0, 20))]]
+
+layout = [[sg.Column(layout, element_justification='c', pad=(100,0))]]
+
+# Create the window
+window = sg.Window("Dijkstra para Melhor Caminho", layout, size=(550, 250), finalize=true, keep_on_top=true)
+window['-Start_Server-'].bind('<KeyRelease>', 'KEY DOWN')
+window['-End_Server-'].bind('<KeyRelease>', 'KEY DOWN')
+
+# Create an event loop
+inicio = 'DF'
+fim = 'DF'
+while True:
+    event, values = window.read()
+    #print(values)
+    # End program if user closes window or
+    # presses the OK button
+    if event == "OK" or event == sg.WIN_CLOSED:
+        inicio = values['-Start_Server-']
+        fim = values['-End_Server-']
+        break
+    elif event == "-Start_Server-KEY DOWN":
+        window['-Start_Server-'].Widget.event_generate('<Down>')
+    elif event == "-End_Server-KEY DOWN":
+        window['-End_Server-'].Widget.event_generate('<Down>')
+        
+window.close()
+
+path = dijkstra_path(graph, inicio, fim)
 
 color_map = []
 for node in graph:
