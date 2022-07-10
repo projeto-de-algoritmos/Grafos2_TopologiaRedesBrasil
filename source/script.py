@@ -65,10 +65,10 @@ nodes = [
     'SC', 'SP', 'RJ', 'ES', 'PE', 'PB_CGE'
 ]
 fixed_positions = {
-    'RO':(5,5), 'MT':(4,4), 'DF':(0,0), 'GO':(3,3), 'AM':(6,6), 'RR':(3,7), 'CE':(8,8), 'RN':(7,3),
-    'AC':(7,1), 'MS':(5,4), 'TO':(2,4), 'MG':(1,5), 'AP':(3,5), 'PA':(2,4), 'MA':(5,8), 
-    'PB_JPA':(9,3), 'PR':(4,5), 'BA':(2,6), 'SE':(5,7), 'AL':(5,3), 'RS':(3,7), 'PI':(10,4),
-    'SC':(0,7), 'SP':(0, -2), 'RJ':(5,7), 'ES':(0,4), 'PE':(4,6), 'PB_CGE':(5,5)
+    'RO':(0,100), 'MT':(20,100), 'DF':(50,100), 'GO':(30,100), 'AM':(70,100), 'RR':(80,100), 'CE':(90,100), 'RN':(100,100),
+    'AC':(0,60), 'MS':(20,60), 'TO':(30,50), 'MG':(60,60), 'AP':(70,60), 'PA':(80,50), 'MA':(90,50), 
+    'PB_JPA':(100,50), 'PR':(20,30), 'BA':(60,30), 'SE':(70,30), 'AL':(80,30), 'RS':(0,30), 'PI':(90,30),
+    'SC':(0,0), 'SP':(20, 0), 'RJ':(50,0), 'ES':(60,0), 'PE':(90,0), 'PB_CGE':(100,0)
                    }
 
 edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
@@ -143,5 +143,5 @@ print(path)
 
 # get edges weights
 weights = [graph[u][v]['weight'] for u, v in graph.edges()]
-networkx.draw(graph, node_size=800, node_color=color_map, pos=fixed_positions, with_labels=True, linewidths=10)
+networkx.draw(graph, node_size=500, node_color=color_map, pos=fixed_positions, with_labels=True, linewidths=10, font_size=9)
 plt.show()
