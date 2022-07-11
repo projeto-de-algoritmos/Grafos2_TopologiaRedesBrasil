@@ -18,17 +18,26 @@ Nosso trabalho irá se basear nesse grafo de panorama de tráfego para gerar o m
 ![Grafo Original](imagens/grafo_Internet.png)
 
 ## Video
-Em breve no formato ".mp4"
+Está disponibilizado na pasta video na extensão ".mp4"
 
 ## Instalação 
 use o comando: pip install -r requirements.txt
 
 **Linguagem**: Python3 <br>
-**Bibliotecas**: declaradas do requirements.txt<br>
+**Bibliotecas**: declaradas no requirements.txt<br>
 **Pre-Requisitos**: Python 3.10.4 <br>
 
 ## Uso 
-Em breve
+* Entre na pasta do script:
 
+```sh
+cd ../Grafos2_TopologiaRedesBrasil/source 
+```
+
+* Rode o projeto com o comando:
+
+```sh
+python3 script.py 
+```
 
 
