@@ -21,7 +21,7 @@ Nosso trabalho irá se basear nesse grafo de panorama de tráfego para gerar o m
 Em breve no formato ".mp4"
 
 ## Instalação 
-use o comando: pip install -m requirements.txt
+use o comando: pip install -r requirements.txt
 
 **Linguagem**: Python3 <br>
 **Bibliotecas**: emBreve<br>
