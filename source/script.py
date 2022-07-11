@@ -17,12 +17,12 @@ nodes = [
 
 # list of accepted edges
 edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
-         ("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF",
-                                                    "SP"), ("GO", "MT"), ("GO", "TO"),
-         ("TO", "PA"), ("MT", "MS"), ("MT", "RO"), ("RO", "AC"), ("MS", "PR"), ("PR", "RS"), ("RS", "SC"), ("SC", "SP"), ("SP", "PR"), ("RS", "SP"), ("PR", "SC"), ("SP", "RJ"), ("SP",
-                                                                                                                                                                                  "RJ"), ("SP", "MG"), ("SP", "CE"), ("RJ", "MG"), ("RJ", "ES"), ("ES", "BA"), ("MG", "BA"), ("BA", "CE"), ("BA", "SE"), ("SE", "AL"), ("AL", "PE"), ("PA", "MA"),
-         ("BA", "PB_CGE"), ("PE", "PI"), ("PI",
-                                          "MA"), ("AM", "RR"), ("RR", "CE"), ("CE", "RN"),
+         ("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF", "SP"), ("GO", "MT"), ("GO", "TO"),
+         ("TO", "PA"), ("MT", "MS"), ("MT", "RO"), ("RO", "AC"), ("MS", "PR"), ("PR", "RS"), 
+         ("RS", "SC"), ("SC", "SP"), ("SP", "PR"), ("RS", "SP"), ("PR", "SC"), ("SP", "RJ"), 
+         ("SP", "RJ"), ("SP", "MG"), ("SP", "CE"), ("RJ", "MG"), ("RJ", "ES"), ("ES", "BA"), 
+         ("MG", "BA"), ("BA", "CE"), ("BA", "SE"), ("SE", "AL"), ("AL", "PE"), ("PA", "MA"),
+         ("BA", "PB_CGE"), ("PE", "PI"), ("PI", "MA"), ("AM", "RR"), ("RR", "CE"), ("CE", "RN"),
          ("PE", "PB_CGE"), ("RN", "PB_CGE"), ("RN", "PB_JPA"), ("PB_CGE", "PB_JPA"),
          ("AM", "AP"), ("AP", "PA")]
 
@@ -55,13 +55,7 @@ def add_weights_to_edges(graph):
 
 
 def dijkstra_path(graph, start, end):
-    """
-    Finds the shortest path between two nodes in a graph using Dijkstra's algorithm.
-    :param graph: The graph to search.
-    :param start: The node to start from.
-    :param end: The node to end at.
-    :return: A list of nodes in the shortest path.
-    """
+    
     # Initialise the distance dictionary.
     distance = {}
     for node in graph.nodes():
@@ -104,7 +98,7 @@ def dijkstra_path(graph, start, end):
     # If no path was found, return None.
     return None
 
-
+networkx.dijkstra_path
 # Create a graph with the nodes and edges
 graph = networkx.Graph()
 graph.add_nodes_from(nodes)

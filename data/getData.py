@@ -3,12 +3,12 @@ from geopy import distance
 
 
 edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
-         ("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF",
-                                                    "SP"), ("GO", "MT"), ("GO", "TO"),
-         ("TO", "PA"), ("MT", "MS"), ("MT", "RO"), ("RO", "AC"), ("MS", "PR"), ("PR", "RS"), ("RS", "SC"), ("SC", "SP"), ("SP", "PR"), ("RS", "SP"), ("PR", "SC"), ("SP", "RJ"), ("SP",
-                                                                                                                                                                                  "RJ"), ("SP", "MG"), ("SP", "CE"), ("RJ", "MG"), ("RJ", "ES"), ("ES", "BA"), ("MG", "BA"), ("BA", "CE"), ("BA", "SE"), ("SE", "AL"), ("AL", "PE"), ("PA", "MA"),
-         ("BA", "PB"), ("PE", "PI"), ("PI",
-                                      "MA"), ("AM", "RR"), ("RR", "CE"), ("CE", "RN"),
+         ("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF", "SP"), ("GO", "MT"), ("GO", "TO"),
+         ("TO", "PA"), ("MT", "MS"), ("MT", "RO"), ("RO", "AC"), ("MS", "PR"), ("PR", "RS"), 
+         ("RS", "SC"), ("SC", "SP"), ("SP", "PR"), ("RS", "SP"), ("PR", "SC"), ("SP", "RJ"), 
+         ("SP", "RJ"), ("SP", "MG"), ("SP", "CE"), ("RJ", "MG"), ("RJ", "ES"), ("ES", "BA"), 
+         ("MG", "BA"), ("BA", "CE"), ("BA", "SE"), ("SE", "AL"), ("AL", "PE"), ("PA", "MA"),
+         ("BA", "PB"), ("PE", "PI"), ("PI", "MA"), ("AM", "RR"), ("RR", "CE"), ("CE", "RN"),
          ("PE", "PB"), ("RN", "PB"), ("RN", "PB"), ("PB", "PB"),
          ("AM", "AP"), ("AP", "PA")]
 

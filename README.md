@@ -24,7 +24,7 @@ Em breve no formato ".mp4"
 use o comando: pip install -r requirements.txt
 
 **Linguagem**: Python3 <br>
-**Bibliotecas**: emBreve<br>
+**Bibliotecas**: declaradas do requirements.txt<br>
 **Pre-Requisitos**: Python 3.10.4 <br>
 
 ## Uso 
