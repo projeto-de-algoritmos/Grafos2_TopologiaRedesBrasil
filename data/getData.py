@@ -1,44 +1,6 @@
 import pandas as pd
 from geopy import distance
 
-# paths
-csv_path = './br.csv'
-# dict_path = 'Data_Dictionary.csv'
-
-# needed columns
-needed_cols = ['city', 'lat', 'lng', 'capital']
-
-# data_dict = pd.read_csv(dict_path)
-csv_file = pd.read_csv(csv_path)
-
-# DROP ALL COLUMNS THAT ARE NOT NEEDED
-csv_file = csv_file[needed_cols]
-
-# DROP ALL ROWS WITH NULL VALUES
-csv_file = csv_file.dropna()
-
-
-# GET ONLY THE CAPITAL CITIES
-csv_file = csv_file[csv_file['capital'] != '']
-
-
-# print(csv_file)
-# print(len(csv_file))
-
-
-states_csv = pd.read_csv('./BRAZIL_CITIES_REV2022.CSV')
-columns = ['city', 'state']
-states_csv = states_csv[columns]
-
-# add states to csv_file, dont forget to drop duplicates
-csv_file = csv_file.merge(states_csv, on='city')
-
-# drop states that are duplicates
-csv_file = csv_file.drop_duplicates(subset=['state'])
-csv_file = csv_file.drop_duplicates(subset=['city'])
-
-print(csv_file)
-
 
 edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
          ("DF", "MA"), ("DF", "CE"), ("DF", "AM"), ("DF",
@@ -53,6 +15,9 @@ edges = [("DF", "TO"), ("DF", "GO"), ("DF", "AC"), ("DF", "RJ"), ("DF", "MG"),
 # CREATE A DICTIONARY OF CAPITAL AND DISTANCE
 capitals_distances = []
 
+
+path = './br_cities.csv'
+csv_file = pd.read_csv(path)
 
 # GET THE DISTANCE BETWEEN states in city_connections and that match the edges
 for row in csv_file.iterrows():
@@ -73,7 +38,7 @@ print(pd.DataFrame(capitals_distances, columns=[
       'state1', 'state2', 'distance']))
 
 # export capital distances to csv
-pd.DataFrame(capitals_distances, columns=['state1', 'state2', 'distance']).to_csv(
-    './states_distances.csv')
+# pd.DataFrame(capitals_distances, columns=['state1', 'state2', 'distance']).to_csv(
+# './states_distances.csv')
 
-# print(capitals_distances)
+print(capitals_distances)

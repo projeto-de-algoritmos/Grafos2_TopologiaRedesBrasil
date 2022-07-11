@@ -1,0 +1,28 @@
+city,lat,lng,capital,state
+São Paulo,-23.5504,-46.6339,admin,SP
+Rio de Janeiro,-22.9083,-43.1964,admin,RJ
+Belo Horizonte,-19.9281,-43.9419,admin,MG
+Brasília,-15.7939,-47.8828,primary,DF
+Salvador,-12.9708,-38.5108,admin,BA
+Fortaleza,-3.7275,-38.5275,admin,CE
+Curitiba,-25.4297,-49.2719,admin,PR
+Manaus,-3.1,-60.0167,admin,AM
+Recife,-8.0539,-34.8808,admin,PE
+Belém,-1.4558,-48.5039,admin,PA
+Porto Alegre,-30.0328,-51.23,admin,RS
+Goiânia,-16.6806,-49.2564,admin,GO
+São Luís,-2.53,-44.3028,admin,MA
+Maceió,-9.6658,-35.735,admin,AL
+Campo Grande,-20.4686,-54.6222,admin,MS
+Natal,-5.795,-35.2089,admin,RN
+Teresina,-5.0949,-42.8042,admin,PI
+João Pessoa,-7.12,-34.88,admin,PB
+Aracaju,-10.9111,-37.0717,admin,SE
+Cuiabá,-15.5958,-56.0969,admin,MT
+Florianópolis,-27.5933,-48.553,admin,SC
+Macapá,0.033,-51.0653,admin,AP
+Porto Velho,-8.7619,-63.9039,admin,RO
+Rio Branco,-9.9781,-67.8117,admin,AC
+Vitória,-20.3189,-40.3378,admin,ES
+Boa Vista,2.82,-60.6719,admin,RR
+Palmas,-10.2128,-48.3603,admin,TO
